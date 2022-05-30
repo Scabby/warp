@@ -63,7 +63,7 @@ height              = 250
 fundamental_scale   = 100
 skew_scale          = 30
 precision           = 8
-seed                = Math.random()
+seed                = parseInt(Math.random() * 65536)
 
 warp_rands = []
 for(i = 0; i < 8; i ++) {
