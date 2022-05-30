@@ -1,0 +1,18 @@
+html, * {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+}
+
+canvas {
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    object-fit: contain;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+}
