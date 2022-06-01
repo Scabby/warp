@@ -80,7 +80,7 @@ window.onload = () => {
 width               = 250
 height              = 250
 generation_scale    = 100
-skew_scale          = 1
+skew_scale          = 0.3
 warp_octaves        = 5
 fractal_octaves     = 8
 seed                = parseInt(Math.random() * 65536)
