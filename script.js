@@ -51,6 +51,9 @@ function convert(value) {
 }
 
 async function draw() {
+    canvas.width    = width
+    canvas.height   = height
+    
     for(let y = 0; y < height; y++) {
         for(let x = 0; x < width; x++) {
             const img = ctx.createImageData(1, 1)
@@ -71,16 +74,13 @@ window.onload = () => {
     canvas  = document.getElementsByTagName("canvas")[0]
     ctx     = canvas.getContext("2d")
 
-    canvas.width    = width
-    canvas.height   = height
-
     setTimeout(draw, 10) // prevents "this website has slowed down your browser"
 }
 
 width               = 250
 height              = 250
-generation_scale    = 100
-skew_scale          = 0.3
+generation_scale    = 500
+skew_scale          = 0.15
 warp_octaves        = 5
 fractal_octaves     = 8
 seed                = parseInt(Math.random() * 65536)
