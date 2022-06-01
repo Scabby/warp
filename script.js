@@ -4,15 +4,19 @@ function warp(x, y, seed, w_octaves = 1, f_octaves = 1) {
     let y_warp = 0
 
     for(let i = 0; i < w_octaves; i++) {
+        let m
+        if(i % 2 == 0)  { m = -1 }
+        else            { m = 1 }
+
         x_warp = fractal(
-            x + x_warp * skew_scale * generation_scale + warp_rands[i + 0],
-            y + y_warp * skew_scale * generation_scale + warp_rands[i + 1],
+            x + x_warp * skew_scale * generation_scale * m + warp_rands[i + 0] * m
+            y + y_warp * skew_scale * generation_scale * m + warp_rands[i + 1] * m
             seed,
             f_octaves
         )
         y_warp = fractal(
-            x + x_warp * skew_scale * generation_scale + warp_rands[i + 2],
-            y + y_warp * skew_scale * generation_scale + warp_rands[i + 3],
+            x + x_warp * skew_scale * generation_scale * m + warp_rands[i + 2] * m
+            y + y_warp * skew_scale * generation_scale * m + warp_rands[i + 3] * m
             seed,
             f_octaves
         )
