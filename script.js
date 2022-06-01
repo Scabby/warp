@@ -1,3 +1,4 @@
+// thanks, https://iquilezles.org/articles/warp/
 function warp(x, y, seed, w_octaves = 1, f_octaves = 1) {
     let x_warp = 0
     let y_warp = 0
