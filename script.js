@@ -12,7 +12,7 @@ function warp(x, y, seed, w_octaves = 1, f_octaves = 1) {
         )
         y_warp = fractal(
             x + x_warp * skew_scale * generation_scale + warp_rands[i + 2],
-            y + y_warp * skew_scale * generatoin_scale + warp_rands[i + 3],
+            y + y_warp * skew_scale * generation_scale + warp_rands[i + 3],
             seed,
             f_octaves
         )
